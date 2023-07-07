@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletín de Vacantes</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!---------------------------------- Inputs -------------------------------->
+        <p style="color:#f2f2f2;
+        	font-size: 21pt;
+        	font-weight: 700;">Por Región <span style="color: #f26524;">/ Externo</span></p>
+
+        <div class=" zona-input">
+            <div class="secc-amu">
+                <div class="secc-area">
+                    <p class="input-usuario">Ciudad</p>
+                    <select name="region" id="input-region">
+                        <option value="">Selecciona una región</option>
+                        <option value="Bajío">Bajío</option>
+                        <option value="Baja California">Baja California</option>
+                    </select>
+                </div>
+                <div class="secc-mes">
+                    <p class="input-usuario">Mes</p>
+                    <select name="input-mes" id="input-mes">
+                        <option value="Enero">Enero</option>
+                        <option value="Febrero">Febrero</option>
+                        <option value="Marzo">Marzo</option>
+                        <option value="Abril">Abril</option>
+                        <option value="Mayo">Mayo</option>
+                        <option value="Junio">Junio</option>
+                        <option value="Julio">Julio</option>
+                        <option value="Agosto">Agosto</option>
+                        <option value="Septiembre">Septiembre</option>
+                        <option value="Octubre">Octubre</option>
+                        <option value="Noviembre">Noviembre</option>
+                        <option value="Diciembre">Diciembre</option>
+                    </select>
+                </div>
+                <div class="descargar-ext">
+                    <p class="dom-capt"><a
+                            href="https://chrome.google.com/webstore/detail/dom-capture/ifldimnhajpgognpcoomiokinilgjgbl/related"
+                            target="_blank">⚠️Descarga
+                            la extensión DOM Capture</a></p>
+                    <button onclick="copiarString()" id="generar-flyer">
+                        Copiar String para DOM Capture
+                    </button>
+                </div>
+            </div>
+            <div class="secc-lista">
+                <p class="input-usuario">Lista de vacantes</p>
+                <textarea id="input-lista" placeholder="Escribe o pega aquí la lista de vacantes."
+                    oninput="convertirTexto()"></textarea><br><br>
+
+            </div>
+        </div>
+        <!-------------------------------- AREA BOLETIN ---------------------------->
+        <div class="area-boletin" id="screenshot">
+            <div class="seccion-logo">
+                <img src="./media/naps-logo-completo.png" alt="logo-nc" class="logo">
+            </div>
+            <div class="encabezado">
+                <div class="seccion-titulo">
+                    <p class="vacantesde">Vacantes en la región<br>
+                        <span id="region"></span>
+                    </p>
+                </div>
+                <div class="seccion-infoadicional">
+                    <div class="seccion-mes">
+                        <p class="mes">📆<span id="mes"></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="listado">
+                <ul id="lista"></ul>
+            </div>
+            <p class="nota"><span id="ast">*</span></strong>Inglés avanzado requerido.</p>
+            <div class="footer">
+                <p class="text-footer">Para mayor información sobre cualquier vacante, contáctanos al <strong>664 969
+                        4609</strong>.</p>
+                <p class="text-footer2">Conoce todas nuestras vacantes, entrando a <br>
+                    <span id="correo">mi.empleonaps.com</span>
+                </p>
+
+            </div>
+            <div class="fondo-2-footer"></div>
+        </div>
+        <div id="output"></div>
+    </div>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>
